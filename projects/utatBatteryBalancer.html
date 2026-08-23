@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnav Agarwal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  - Colors, fonts, spacing → ../assets/css/style.css (shared by every page)
+  - Name / role / nav → <header class="page-head">, same on every page
+  - Title / tags / summary → <section class="project-hero">
+  - Top image slider → <div class="slider">, one <div class="slide"> +
+    matching <button class="dot"> per image (see ../assets/css/style.css for the
+    full markup pattern)
+  - Body content → a series of <div class="doc-section"> (text) and
+    <div class="doc-image"> (full-width image) pairs, top to bottom
+  - Real photos → replace <div class="img-ph"><span class="cap">...</span></div>
+    with <img src="your-image.jpg" alt="...">
+  - Prev/next links at the bottom → <nav class="project-nav">
+-->
+
+<main class="wide">
+
+  <header class="page-head">
+    <span class="name">Arnav Agarwal</span>
+    <p class="role-line">Electrical &amp; Computer Engineering</p>
+    <nav class="top-nav">
+      <a href="../index.html">About Me</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../projects.html" class="active">Projects</a>
+    </nav>
+  </header>
+
+  <div class="trace"><div class="via"></div><div class="seg"></div></div>
+
+  <section class="project-hero">
+    <h1>University of Toronto Aerospace Team (UTAT) Battery Balancer</h1>
+    <div class="stack-tags">
+      <span class="stack-tag">Altium Designer</span>
+      <span class="stack-tag">PCB Design</span>
+
+    </div>
+      <p class="summary">
+        I designed a battery balancer breakout PCB for UTAT's CubeSat project. I started by defining the requirements for the battery balancer component, followed by component selection, 
+        and finally schematic and layout in Altium.
+      </p>
+  </section>
+
+  <div class="doc-section doc-section--figure">
+    <h3>System Block Diagram</h3>
+    <figure class="doc-figure">
+      <img src="../assets/images/projects/utat-battery-balancer/utat_battery_balancer.png" alt="3D view of the battery balancer PCB">
+      <figcaption>Fig. 1 — 3D view of the battery balancer PCB</figcaption>
+    </figure>
+  </div>
+
+  <div class="doc-section">
+    <h3>Setting the Requirements</h3>
+    <p>
+      The project started as a battery balancer and protection circuit before later being redefined into just battery balancing. 
+
+      I started by defining the requirements for the battery balancer component. The requirements were developed based on our battery pack specifications and the desired functionality of the battery balancer
+      and protection IC. Our batter pack was a 2S2P Li-ion battery pack with a nominal cell voltage of 3.6V and pack voltage of 7.2V. 
+      
+      <br><br>
+
+      The main requirements were:
+
+      <ul>
+        <li>The component must be able to take at least two battery cells in series</li>
+        <li>The component must communicate over I2C since our power system bus is I2C</li>
+        <li>The component should provide adjustable over-voltage and under-voltage protection</li>
+        <li>The component should provide adjustable under-current protection</li>
+      </ul>
+
+    </p>
+
+    <div class="doc-section">
+      <h3>Component Selection</h3>
+      <p>
+        I selected the components for the project based on the requirements. I had a hard time finding a single component that could satisfy all the requirements, since very few components had under-current 
+        protection in addition to the constraints. I ended up choosing the BQ76907 from Texas Instruments since it had an I2C compatible interface and several protection features. 
+
+        <br><br>
+
+        During a design review, my team and I realized that this component had low-side protection, which causes the Ground to get dereferenced during a protection event. 
+        This could cause the entire electrical system of the satellite to blow up since the Ground is the reference for all voltages in the system. So, we decided to add another requirement:
+
+        <strong>The component must have high-side protection.</strong>
+
+
+        <br><br>
+
+        After looking for more components with the new requirements, the team and I decided to look for components that were just battery balancers, since there were very few compoenents that satisfied
+        our protection requirements while also using I2C. So, we finally settled on the MAX17205, and this was the component that I ended up designing the schematic and layout for.
+      </p>
+
+  </div>
+
+  <div class="doc-section">
+    <h3></h3>
+    <p>
+      I selected the components for the project based on the requirements. I had a hard time finding a single component that could satisfy all the requirements, since very few components had under-current 
+      protection in addition to the constraints. I ended up choosing the BQ76907 from Texas Instruments since it had an I2C compatible interface and several protection features. 
+
+      <br><br>
+
+      During a design review, my team and I realized that this component had low-side protection, which causes the Ground to get dereferenced during a protection event. 
+      This could cause the entire electrical system of the satellite to blow up since the Ground is the reference for all voltages in the system. So, we decided to add another requirement:
+
+      <strong>The component must have high-side protection.</strong>
+
+
+      <br><br>
+
+      After looking for more components with the new requirements, the team and I decided to look for components that were just battery balancers, since there were very few compoenents that satisfied
+      our protection requirements while also using I2C. So, we finally settled on the MAX17205, and this was the component that I ended up designing the schematic and layout for.
+    </p>
+
+</div>
+
+<div class="doc-section">
+    <h3>Design and Testing</h3>
+    <p>
+      After selecting the component, I transitioned to Altium Designer for schematic capture and PCB layout. 
+      Since this board is a breakout board, I needed to ensure that all control signals were broken out to headers so that the board can easilyinterface with an external microcontroller during testing. 
+      Additionally, the shunt resistor for the MAX17205 was routed using Kelvin sensing to ensure accurate measurements for state-of-charge. 
+      After the board arrived I soldered the components on my own.
+    </p>
+</div>
+
+<div class="slider" data-slider>
+  <p class="slider-heading mono" data-slider-heading>Battery Balancer PCB</p>
+  <div class="slider-frame">
+    <button class="slider-arrow prev" data-slider-prev aria-label="Previous image">‹</button>
+    <div class="slider-track">
+      <div class="img-ph slide is-active" data-slide>
+        <span class="cap">Bare PCB</span>
+        <img src="../assets/images/projects/utat-battery-balancer/balancer_1.jpg" alt="Bare PCB">
+      </div>
+      <div class="img-ph slide" data-slide>
+        <span class="cap">Completed PCB</span>
+        <img src="../assets/images/projects/utat-battery-balancer/balancer_2.jpg" alt="Completed PCB">
+      </div>
+    </div>
+    <button class="slider-arrow next" data-slider-next aria-label="Next image">›</button>
+  </div>
+  <div class="slider-dots" data-slider-dots>
+    <button class="dot is-active" aria-label="Show image 1"></button>
+    <button class="dot" aria-label="Show image 2"></button>
+  </div>
+</div>
+
+
+
+
+
+<div class="doc-section">
+  <h3>Design and Testing</h3>
+  <p>
+    I a currently in the process of testing the board with our battery pack. So far, I have been able to get the board to communicate over I2C and read the state-of-charge of the battery pack, but I haven't 
+    tested the balancing functionality yet.
+  </p>
+</div>
+
+  <!-- <nav class="project-nav">
+    <a href="mppt.html">← Solar Car MPPT Controller</a>
+    <a href="ice40.html">iCE40 + ESP32 FPGA Board →</a>
+  </nav> -->
+
+</main>
+
+<footer class="sig">designed &amp; built by Arnav</footer>
+
+<div class="lightbox-overlay" id="lightbox-overlay">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <div class="img-ph"></div>
+</div>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
