@@ -434,8 +434,10 @@ footer.sig{
   max-width: 760px;
   text-align: center;
 }
-.doc-figure img{
+.doc-figure img,
+.doc-figure video{
   width: 100%;
+  height: auto;
   display: block;
   border: 1px solid var(--line);
   border-radius: 3px;
