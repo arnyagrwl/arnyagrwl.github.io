@@ -102,8 +102,24 @@ main.wide{ max-width: var(--max-wide); }
   margin: 0 0 10px;
   letter-spacing: -0.01em;
 }
-.role-line{ font-size: 18px; color: var(--pcb-navy); margin: 0 0 26px; font-weight: 500; }
+.role-line{ font-size: 18px; color: var(--pcb-navy); margin: 0; font-weight: 500; }
 .lede{ max-width: 54ch; font-size: 17px; color: var(--ink); opacity: 0.85; margin: 40px 0 0; }
+
+.role-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 26px;
+}
+.social-links{ display: flex; gap: 14px; flex-shrink: 0; }
+.social-links a{
+  color: var(--muted);
+  display: flex;
+  transition: color .15s ease;
+}
+.social-links a:hover{ color: var(--pcb-navy); }
+.social-links svg{ width: 19px; height: 19px; fill: currentColor; display: block; }
 
 nav.top-nav{
   display: flex;
