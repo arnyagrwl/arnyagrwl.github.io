@@ -320,6 +320,10 @@ footer.sig{
   object-fit: cover;
   display: block;
 }
+/* Anchors the crop to the top-left corner instead of the default
+   center, so the image still fills the box edge-to-edge but any
+   trimming happens off the right/bottom side. */
+.img-ph.anchor-top-left img{ object-position: left top; }
 .img-ph .cap{
   position: relative;
   z-index: 1;

@@ -55,10 +55,10 @@
   </section>
 
   <div class="doc-section doc-section--figure">
-    <h3>System Block Diagram</h3>
+    <h3>PCB Render</h3>
     <figure class="doc-figure">
       <img src="../assets/images/projects/utat-battery-balancer/utat_battery_balancer.png" alt="3D view of the battery balancer PCB">
-      <figcaption>Fig. 1 — 3D view of the battery balancer PCB</figcaption>
+      <figcaption>3D view of the battery balancer PCB</figcaption>
     </figure>
   </div>
 
@@ -68,7 +68,7 @@
       The project started as a battery balancer and protection circuit before later being redefined into just battery balancing. 
 
       I started by defining the requirements for the battery balancer component. The requirements were developed based on our battery pack specifications and the desired functionality of the battery balancer
-      and protection IC. Our batter pack was a 2S2P Li-ion battery pack with a nominal cell voltage of 3.6V and pack voltage of 7.2V. 
+      and protection IC. Our battery pack was a 2S2P Li-ion battery pack with a nominal cell voltage of 3.6V and pack voltage of 7.2V. 
       
       <br><br>
 
@@ -147,8 +147,12 @@
         <img src="../assets/images/projects/utat-battery-balancer/balancer_1.jpg" alt="Bare PCB">
       </div>
       <div class="img-ph slide" data-slide>
-        <span class="cap">Completed PCB</span>
-        <img src="../assets/images/projects/utat-battery-balancer/balancer_2.jpg" alt="Completed PCB">
+        <span class="cap">Assembled PCB</span>
+        <img src="../assets/images/projects/utat-battery-balancer/balancer_soldered.jpg" alt="Completed PCB">
+      </div>
+      <div class="img-ph slide" data-slide>
+        <span class="cap">Testing with Battery Pack</span>
+        <img src="../assets/images/projects/utat-battery-balancer/balancer_testing.JPG" alt="Testing with battery pack">
       </div>
     </div>
     <button class="slider-arrow next" data-slider-next aria-label="Next image">›</button>
@@ -156,6 +160,7 @@
   <div class="slider-dots" data-slider-dots>
     <button class="dot is-active" aria-label="Show image 1"></button>
     <button class="dot" aria-label="Show image 2"></button>
+    <button class="dot" aria-label="Show image 3"></button>
   </div>
 </div>
 
@@ -164,7 +169,6 @@
 
 
 <div class="doc-section">
-  <h3>Design and Testing</h3>
   <p>
     I a currently in the process of testing the board with our battery pack. So far, I have been able to get the board to communicate over I2C and read the state-of-charge of the battery pack, but I haven't 
     tested the balancing functionality yet.
