@@ -35,8 +35,8 @@
   --line: #DBD8CE;           /* hairline borders / dividers */
 
   /* Layout widths */
-  --max: 760px;              /* home page content width */
-  --max-wide: 880px;         /* nav bar + project detail page width */
+  --max: 840px;              /* home page content width */
+  --max-wide: 840px;         /* nav bar + project detail page width */
 }
 
 *{ box-sizing: border-box; }
@@ -130,7 +130,7 @@ nav.top-nav{
   font-family: 'Source Serif 4', Georgia, serif;
   font-variant: small-caps;
   letter-spacing: 0.06em;
-  font-size: 18px;
+  font-size: 20px;
 }
 nav.top-nav a{
   color: var(--muted);
@@ -177,6 +177,7 @@ section h2{
 #about p{ max-width: 58ch; font-size: 17px; }
 
 /* ---------- Experience ---------- */
+#experience{ margin-top: -16px; }
 .exp-item{
   display: grid;
   grid-template-columns: 108px 1fr;
