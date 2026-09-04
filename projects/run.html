@@ -78,7 +78,7 @@
       <br><br>
       The player can move around in game using a PS/2 keyboard or a force-sensing resistor (FSR) attached to their foot.
       
-      If the user repeatedly presses down on the FSR (like when you walk),the player will move in game. 
+      If the user repeatedly presses down on the FSR (like when you walk), the player will move in game. 
 
       The FSR works by creating a voltage divider circuit with a fixed resistor and a variable resistor. The variable resistor is the FSR, and the fixed resistor is a 10k ohm resistor. 
       The voltage divider circuit is then connected to the to an analog Arduino pin, which converts the voltage to a digital value and outputs it to a digital pin which the NIOS V can read through its GPIO ports. The ADC converts the voltage to a digital value, which is then used to determine the player's speed.
