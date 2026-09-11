@@ -389,7 +389,12 @@ footer.sig{
 .slider-track{ flex: 1; min-width: 0; }
 .slider-track .slide{ display: none; cursor: zoom-in; }
 .slider-track .slide.is-active{ display: flex; }
-.slider-track .img-ph{ width: 100%; min-height: 300px; }
+.slider-track .img-ph{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  height: auto;
+}
 .slider-arrow{
   flex-shrink: 0;
   width: 38px;
@@ -422,7 +427,6 @@ footer.sig{
 .slider-dots .dot.is-active{ background: var(--accent); border-color: var(--accent); }
 
 @media (max-width: 620px){
-  .slider-track .img-ph{ min-height: 220px; }
   .slider-frame{ gap: 8px; }
   .slider-arrow{ width: 32px; height: 32px; font-size: 15px; }
 }
