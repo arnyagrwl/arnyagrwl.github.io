@@ -118,26 +118,6 @@
 
   </div>
 
-  <div class="doc-section">
-    <h3></h3>
-    <p>
-      I selected the components for the project based on the requirements. I had a hard time finding a single component that could satisfy all the requirements, since very few components had under-current 
-      protection in addition to the constraints. I ended up choosing the BQ76907 from Texas Instruments since it had an I2C compatible interface and several protection features. 
-
-      <br><br>
-
-      During a design review, my team and I realized that this component had low-side protection, which causes the Ground to get dereferenced during a protection event. 
-      This could cause the entire electrical system of the satellite to blow up since the Ground is the reference for all voltages in the system. So, we decided to add another requirement:
-
-      <strong>The component must have high-side protection.</strong>
-
-
-      <br><br>
-
-      After looking for more components with the new requirements, the team and I decided to look for components that were just battery balancers, since there were very few compoenents that satisfied
-      our protection requirements while also using I2C. So, we finally settled on the MAX17205, and this was the component that I ended up designing the schematic and layout for.
-    </p>
-
 </div>
 
 <div class="doc-section">
