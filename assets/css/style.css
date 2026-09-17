@@ -174,7 +174,23 @@ section h2{
   margin: 0 0 28px;
 }
 
-#about p{ max-width: 58ch; font-size: 17px; }
+.about-layout{
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 340px);
+  gap: 32px;
+  align-items: start;
+}
+#about p{ font-size: 17px; margin: 0; }
+.about-photo{
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  min-height: 0;
+}
+.about-photo.img-ph{ min-height: 0; }
+@media (max-width: 640px){
+  .about-layout{ grid-template-columns: 1fr; }
+  .about-photo{ max-width: 260px; }
+}
 
 /* ---------- Experience ---------- */
 #experience{ margin-top: -16px; }
