@@ -502,11 +502,20 @@ footer.sig{
 }
 .lightbox-overlay.open{ display: flex; }
 .lightbox-overlay .img-ph{
-  width: 100%;
-  max-width: 720px;
-  min-height: 420px;
+  width: min(100%, 960px);
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  height: auto;
+  overflow: hidden;
 }
-.lightbox-overlay .img-ph img{ object-fit: contain; }
+.lightbox-overlay .img-ph img{ object-fit: cover; }
+.lightbox-overlay .img-ph .cap{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
 .lightbox-close{
   position: fixed;
   top: 24px;

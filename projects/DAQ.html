@@ -138,6 +138,42 @@
   </div>
 
 
+
+  <div class="doc-section">
+    <h3>Testing</h3>
+    <p>
+      I soldered the components on my own and tested the SPI communication and MUX control with the Raspberry Pi Pico. I was able to get the board to communicate over SPI and read the data from the ADC and 
+      control the MUXes. I also measured the output voltage from the boost converter and it was 17.8V, which is close to the expected 18V. I also measured the voltage 
+      ripple on the output and it was negligible (less than 100mV). The next step is to do long-term tests with the battery pack, which is what the board was designed for.
+    </p>
+</div>
+
+<div class="slider" data-slider>
+  <div class="slider-frame">
+    <button class="slider-arrow prev" data-slider-prev aria-label="Previous image">‹</button>
+    <div class="slider-track">
+      <div class="img-ph slide is-active" data-slide>
+        <span class="cap">Bare PCB</span>
+        <img src="../assets/images/projects/daq/daq_empty.jpg" alt="Bare PCB">
+      </div>
+      <div class="img-ph slide" data-slide>
+        <span class="cap">Assembled PCB</span>
+        <img src="../assets/images/projects/daq/daq_soldered.jpg" alt="Completed PCB">
+      </div>
+      <div class="img-ph slide" data-slide>
+        <span class="cap">Testing setup. Had to tape the USB-C connector to the board to prevent it from being pulled out.</span>
+        <img src="../assets/images/projects/daq/daq_on.jpg" alt="DAQ board with Pi Pico to test the SPI communication and MUX control">
+      </div>
+    </div>
+    <button class="slider-arrow next" data-slider-next aria-label="Next image">›</button>
+  </div>
+  <div class="slider-dots" data-slider-dots>
+    <button class="dot is-active" aria-label="Show image 1"></button>
+    <button class="dot" aria-label="Show image 2"></button>
+    <button class="dot" aria-label="Show image 3"></button>
+  </div>
+</div>
+
 </main>
 
 <footer class="sig">designed &amp; built by Arnav</footer>
