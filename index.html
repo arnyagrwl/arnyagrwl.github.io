@@ -12,16 +12,6 @@
 
 <body>
 
-<!--
-  HOW TO EDIT THIS PAGE
-  - Colors, fonts, spacing → assets/css/style.css (one file controls the whole site)
-  - This is the home page: intro + about text + contact links.
-  - Name / role / nav → <header class="page-head">, repeated
-    identically (minus the "active" class) on experience.html
-    and projects.html
-  - Experience / Projects each live on their own page —
-    experience.html, projects.html
--->
 
 <main>
 
@@ -60,11 +50,47 @@
       I'm currently working on electrical systems for Blue Sky Solar Racing and the University of Toronto Aerospace Team.
 
       <br><br>
-      Outside of engineering, I enjoy playing guitar, playing and watching basketball (Go Raptors!), and following Formula 1.
+      Outside of engineering, I enjoy playing guitar, <a href="https://www.worldcubeassociation.org/persons/2017AGAR02" target="_blank" rel="noopener">solving Rubik's Cubes</a>, playing and watching basketball (Go Raptors!), and following Formula 1.
     </p>
     <div class="about-photo img-ph">
       <img src="assets/images/projects/index/me3-web.jpg" alt="Arnav Agarwal">
     </div>
+  </section>
+
+  <div class="trace"><div class="via"></div><div class="seg"></div><span class="label">Selected Projects</span><div class="seg"></div></div>
+
+  <section id="featured-projects">
+    <div class="project-list">
+
+      <a class="project-row" href="/projects/DAQ">
+        <div class="project-row-media">
+          <div class="img-ph anchor-top-left">
+            <img src="assets/images/projects/daq/daq_render.png" alt="Data Acquisition System PCB">
+          </div>
+        </div>
+        <div class="project-row-body">
+          <p class="project-title">Data Acquisition System PCB</p>
+          <p class="project-desc">A 16-input data acquisition system PCB for long-term battery testing.</p>
+          <span class="view-link mono">View project →</span>
+        </div>
+      </a>
+
+      <a class="project-row" href="/projects/run">
+        <div class="project-row-media">
+          <div class="img-ph">
+            <img src="assets/images/projects/run/run-cover.jpg" alt="Run Horror Game">
+          </div>
+        </div>
+        <div class="project-row-body">
+          <p class="project-title">Run Horror Game</p>
+          <p class="project-desc">A horror game in bare-metal C on a NIOS V processor with VGA graphics</p>
+          <span class="view-link mono">View project →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <a class="see-all-link mono" href="/projects">See all projects →</a>
   </section>
 
 </main>

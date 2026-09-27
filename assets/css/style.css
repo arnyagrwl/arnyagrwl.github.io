@@ -262,6 +262,18 @@ section h2{
   .project-row-body{ padding: 20px; }
 }
 
+/* Homepage teaser: reuses .project-list/.project-row above, just
+   fewer cards + a link back to the full /projects page. */
+.see-all-link{
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.see-all-link:hover{ color: var(--pcb-navy); }
+
 /* ---------- Contact / Footer ---------- */
 #contact{ padding-bottom: 90px; }
 .contact-links{ display: flex; gap: 28px; margin-top: 6px; }
@@ -467,6 +479,24 @@ footer.sig{
 .doc-section li{ margin-bottom: 6px; }
 
 .doc-section--figure{ max-width: none; }
+
+.peripheral-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+  margin: 16px 0 12px;
+}
+.peripheral-col h4{
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.88;
+  margin: 0 0 8px;
+}
+.peripheral-col ul{ margin: 0; }
+
+@media (max-width: 640px){
+  .peripheral-columns{ grid-template-columns: 1fr; gap: 20px; }
+}
 
 .doc-image{ margin: 40px 0; }
 .doc-image .img-ph{ width: 100%; min-height: 340px; }
